@@ -52,16 +52,16 @@ $(function() {
 
     // Ensures the menu element is hidden by default
     it('has a menu hidden by default', function() {
-      expect($('.menu-hidden')).toBeDefined();
+      expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
     // Ensures the menu changes visibility when the menu icon is clicked.
-    it('hides when the menu icon is clicked', function() {
+    it('toggles between hidden/shown when the menu icon is clicked', function() {
       menuIconLink.trigger('click');
-      expect($('.menu-hidden')).toBeDefined();
+      expect($('body').hasClass('menu-hidden')).toBe(false);
 
       menuIconLink.trigger('click');
-      expect($('.menu-hidden')).toBeDefined();
+      expect($('body').hasClass('menu-hidden')).toBe(true);
     });
   });
 
