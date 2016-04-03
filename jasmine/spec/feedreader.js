@@ -70,6 +70,9 @@ $(function() {
 
     beforeEach(function(done) {
       loadFeed(0, function() {
+
+        // Set to 2nd entry header since first one technically
+        // exists before the ajax call.
         feedEntryHeader = $('.entry h2')[1];
         done();
       });
