@@ -70,7 +70,7 @@ $(function() {
 
     beforeEach(function(done) {
       loadFeed(0, function() {
-        feedEntryHeader = $('.entry h2')[0];
+        feedEntryHeader = $('.entry h2')[1];
         done();
       });
     });
